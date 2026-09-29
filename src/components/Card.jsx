@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "./header";
 
 export default function Card({imgSrc, title, author, desc}) {
     const [show, setShow] = useState(false);
@@ -8,7 +9,7 @@ export default function Card({imgSrc, title, author, desc}) {
         <img className="size-80 rounded-t-2xl" src={imgSrc} alt="anda kurang beruntung coba lagi" />
     
         <div className="flex flex-col gap-2 px-4 py-2">
-         <h1 className="text-xl font-bold">{title}</h1>
+         <Header text={title} />
 
          <span>{author} </span>
 
