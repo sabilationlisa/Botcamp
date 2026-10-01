@@ -1,16 +1,60 @@
-# React + Vite
+# Tugas Week 4 – Song Cards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project React sederhana yang menampilkan daftar lagu dalam bentuk card (gambar, judul, penyanyi, dan deskripsi). Dibuat dengan **React 19**, **Vite**, dan **Tailwind CSS v4**.
 
-Currently, two official plugins are available:
+## Prasyarat
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Node.js](https://nodejs.org/) versi 20.19+ atau 22.12+
+- [pnpm](https://pnpm.io/) — kalau belum ada, install dengan:
 
-## React Compiler
+  ```bash
+  npm install -g pnpm
+  ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Cara Menjalankan
 
-## Expanding the ESLint configuration
+1. Masuk ke folder project:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   ```bash
+   cd "tugas week 4"
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+3. Jalankan development server:
+
+   ```bash
+   pnpm dev
+   ```
+
+4. Buka browser ke alamat yang muncul di terminal (biasanya http://localhost:5173).
+
+## Script Lainnya
+
+| Perintah       | Fungsi                                             |
+| -------------- | -------------------------------------------------- |
+| `pnpm dev`     | Menjalankan development server dengan hot reload   |
+| `pnpm build`   | Build project untuk production ke folder `dist/`   |
+| `pnpm preview` | Menjalankan hasil build secara lokal               |
+| `pnpm lint`    | Mengecek kode dengan ESLint                        |
+
+## Struktur Folder
+
+```
+tugas week 4/
+├── public/            # Gambar cover lagu
+├── src/
+│   ├── components/
+│   │   ├── Card.jsx   # Komponen card lagu
+│   │   └── Header.jsx # Komponen header
+│   ├── App.jsx        # Halaman utama, berisi daftar card
+│   ├── index.css      # Import Tailwind CSS
+│   └── main.jsx       # Entry point React
+├── index.html
+├── package.json
+└── vite.config.js
+```
